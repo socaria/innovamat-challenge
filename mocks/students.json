@@ -2,12 +2,12 @@
     {
         "id": 1,
         "name": "student 2",
-        "sequences": []
+        "responses": []
     },
     {
         "id": 2,
         "name": "student 1",
-        "sequences": [
+        "responses": [
             {
                 "id": 1,
                 "studentId": 1,
@@ -37,7 +37,7 @@
     {
         "id": 3,
         "name": "student 3",
-        "sequences": [
+        "responses": [
             {
                 "id": 1,
                 "studentId": 3,

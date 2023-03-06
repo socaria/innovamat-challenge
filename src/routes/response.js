@@ -4,7 +4,7 @@ const { score } = require('../../methods/score');
 
 
 //Va a postear la secuencia que acaba de responder el estudiante
-const postSequence = (req, res) => {
+const postResponse = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId } = req.query;
     const { activityId, time, result } = req.body;
@@ -16,27 +16,27 @@ const postSequence = (req, res) => {
         const student = students.find(u => {
             return u.id === parseInt(studentId);
         });
-        let lastSequenceId = student.sequences[student.sequences.length - 1].id;
+        let lastResponseId = student.responses[student.responses.length - 1].id;
         const itineraryInCourse = itineraries.find(i => i.id === parseInt(itineraryId));
         const currentActivity = itineraryInCourse.activities.find(activity => activity.id === activityId);
         let isSuccess = false;
         if (score(currentActivity.solution, result) >= 0.75) { isSuccess = true }
-        const sequence = {
-            id: lastSequenceId + 1,
+        const response = {
+            id: lastResponseId + 1,
             studentId: parseInt(studentId),
             time: time,
             activityId: activityId,
             result: result,
             isSuccess: isSuccess
         }
-        lastSequenceId++;
-        student.sequences.push(sequence);
+        lastResponseId++;
+        student.responses.push(response);
 
-        res.send(sequence);
+        res.send(response);
     } catch (error) {
         res.status(404).send({ error: error.message })
     }
 
 }
 
-module.exports = { postSequence };
+module.exports = { postResponse };

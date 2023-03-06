@@ -12,7 +12,7 @@ const getActivity = (req, res) => {
             return u.id === parseInt(studentId);
         });
         const itineraryInCourse = itineraries.find(i => i.id === parseInt(itineraryId));
-        const lastActivitySolved = student.sequences[student.sequences.length - 1];
+        const lastActivitySolved = student.responses[student.responses.length - 1];
         if (lastActivitySolved) {
         const lastActivitySolution = itineraryInCourse.activities.find(activity => activity.id === lastActivitySolved.activityId)
             res.status(200)

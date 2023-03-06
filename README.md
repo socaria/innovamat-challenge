@@ -21,7 +21,7 @@ The time spent by the student to do the activity.
 1. Run `npm install` from "innovamat-challenge" folder to get all the dependencies
 2. Run `npm test` to run the tests
 3. Run `npm run nodemon` to start the server
-4. `http://localhost:3000`
+4. For GET type requests you can access from the browser with the routes indicates in the instructions. For the oders requests you have to install POSTMAN following the instructions in se POSTMAN section (in the end of this README)
 
 ## Instructions
 ### `Get the registered students`
@@ -34,6 +34,15 @@ http://localhost:3000/student
 To get a particular student, for example student 1:
 http://localhost:3000/student?studentId=1
 
+### `Get the itinerary`
+
+Use the following routes to get the available itineraries:
+
+To get all the itineraries: 
+http://localhost:3000/itinerary
+
+To get the calculus itinerary:
+http://localhost:3000/itinerary?itineraryId=1
 
 ### `Get the next activity of some student`
 
@@ -51,9 +60,9 @@ http://localhost:3000/activity/2?itineraryId=1
 Student 3: itinerary is finished
 http://localhost:3000/activity/3?itineraryId=1
 
-### `POST/ sequence/:studentId?itineraryId=1`
+### `Post a response of some student`
 Use the following routes to post a response of some student:
-http://localhost:3000/sequence/studentId?itineraryId=1
+http://localhost:3000/response/studentId?itineraryId=1
 You have to send a object in the body with this information:
 
 {
@@ -65,7 +74,11 @@ You have to send a object in the body with this information:
 #### Example
 ##### Student 1, activity A1
 
-http://localhost:3000/sequence/1?itineraryId=1
+route:
+
+http://localhost:3000/response/1?itineraryId=1
+
+send by body:
 
 {
     "activityId": "A1",
@@ -75,10 +88,51 @@ http://localhost:3000/sequence/1?itineraryId=1
 
 ##### Student 2, activity A3
 
-http://localhost:3000/sequence/2?itineraryId=1
+route:
+
+http://localhost:3000/response/2?itineraryId=1
+
+send by body:
 
 {
     "activityId": "A4",
     "time": 60,
     "result": "1_0_-5_9"
 }
+
+
+## Postman
+
+### Download
+
+Download the postman application from https://www.postman.com/downloads/
+
+### Instructions
+
+Once installed, you will be able to access to "MyWorkSpace" from the following Postman screen:
+
+<p align="center">
+  <img src="./img/postman-main-screen.png" alt="Img" />
+</p>
+
+
+. Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
+
+<p align="center">
+  <img src="./img/postman-new-collection.png" alt="Img" />
+</p>
+
+2. Create a new `Request`, give it a name 
+
+<p align="center">
+  <img src="./img/postman-new-request.png" alt="Img" />
+</p>
+
+- Indicate type of Request:
+
+    * GET
+    * POST
+
+- Indicate the URL http://localhost:3000/
+
+- Include the `Params` or the `Body` depending on the type of Request you make
