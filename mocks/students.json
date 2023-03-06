@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "name": "student 2",
+        "sequences": []
+    },
+    {
+        "id": 2,
+        "name": "student 1",
+        "sequences": [
+            {
+                "id": 1,
+                "studentId": 1,
+                "time": 60,
+                "activityId": "A1",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 2,
+                "studentId": 1,
+                "time": 120,
+                "activityId": "A2",
+                "result": "-1_null_28",
+                "isSuccess": false
+            },
+            {
+                "id": 3,
+                "studentId": 1,
+                "time": 90,
+                "activityId": "A2",
+                "result": "-2_40_56",
+                "isSuccess": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "student 3",
+        "sequences": [
+            {
+                "id": 1,
+                "studentId": 3,
+                "time": 30,
+                "activityId": "A1",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 2,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A5",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 3,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A7",
+                "result": "1_-1_'Yes'_34_-6",
+                "isSuccess": true
+            },
+            {
+                "id": 4,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A9",
+                "result": "1_-1_'Yes'_34_-6",
+                "isSuccess": true
+            },
+            {
+                "id": 4,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A9",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 5,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A10",
+                "result": "1_b_2",
+                "isSuccess": true
+            },
+            {
+                "id": 6,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A11",
+                "result": "2",
+                "isSuccess": true
+            },
+            {
+                "id": 7,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A12",
+                "result": "25_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 8,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A13",
+                "result": "1_0_3",
+                "isSuccess": true
+            },
+            {
+                "id": 9,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A14",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 10,
+                "studentId": 3,
+                "time": 60,
+                "activityId": "A15",
+                "result": "1_0_2",
+                "isSuccess": true
+            }
+        ]
+    }
+]

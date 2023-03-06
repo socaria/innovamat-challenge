@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "calculus",
+        "activities":
+        [
+            {
+                "name": "Activity 1",
+                "id": "A1",
+                "difficulty": "1",
+                "time": "120",
+                "solution": "1_0_2"
+            },
+            {
+                "name": "Activity 2",
+                "id": "A2",
+                "difficulty": "1",
+                "time": "60",
+                "solution": "-2_40_56"
+            },
+            {
+                "name": "Activity 3",
+                "id": "A3",
+                "difficulty": "1",
+                "time": "120",
+                "solution": "1_0"
+            },
+            {
+                "name": "Activity 4",
+                "id": "A4",
+                "difficulty": "1",
+                "time": "180",
+                "solution": "1_0_2_-5_9"
+            },
+            {
+                "name": "Activity 5",
+                "id": "A5",
+                "difficulty": "2",
+                "time": "120",
+                "solution": "1_0_2"
+            },
+            {
+                "name": "Activity 6",
+                "id": "A6",
+                "difficulty": "2",
+                "time": "120",
+                "solution": "1_0_2"
+            },
+            {
+                "name": "Activity 7",
+                "id": "A7",
+                "difficulty": "3",
+                "time": "120",
+                "solution": "1_-1_'Yes'_34_-6"
+            },
+            {
+                "name": "Activity 8",
+                "id": "A8",
+                "difficulty": "3",
+                "time": "120",
+                "solution": "1_2"
+            },
+            {
+                "name": "Activity 9",
+                "id": "A9",
+                "difficulty": "4",
+                "time": "120",
+                "solution": "1_0_2"
+            },
+            {
+                "name": "Activity 10",
+                "id": "A10",
+                "difficulty": "5",
+                "time": "120",
+                "solution": "1_b_2"
+            },
+            {
+                "name": "Activity 11",
+                "id": "A11",
+                "difficulty": "6",
+                "time": "120",
+                "solution": "2"
+            },
+            {
+                "name": "Activity 12",
+                "id": "A12",
+                "difficulty": "7",
+                "time": "120",
+                "solution": "25_0_2"
+            },
+            {
+                "name": "Activity 13",
+                "id": "A13",
+                "difficulty": "8",
+                "time": "120",
+                "solution": "1_0_3"
+            },
+            {
+                "name": "Activity 14",
+                "id": "A14",
+                "difficulty": "9",
+                "time": "120",
+                "solution": "1_0_2"
+            },
+            {
+                "name": "Activity 15",
+                "id": "A15",
+                "difficulty": "10",
+                "time": "120",
+                "solution": "1_0_2"
+            }
+        ]
+    }
+]
