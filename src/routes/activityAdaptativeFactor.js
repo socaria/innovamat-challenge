@@ -1,9 +1,9 @@
 const itineraries = require('../../mocks/itineraries.json');
 const students = require('../../mocks/students.json');
-const { nextActivity } = require('../../methods/nextActivity');
+const { nextActivityAdaptativeFactor } = require('../../methods/nextActivityAdaptativeFactor');
 
 //Va a determinar la actividad que debe realizar el usuario
-const getActivity = (req, res) => {
+const getActivityAdaptativeFactor = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId } = req.query;
     try {
@@ -16,7 +16,7 @@ const getActivity = (req, res) => {
         if (lastActivitySolved) {
         const lastActivitySolution = itineraryInCourse.activities.find(activity => activity.id === lastActivitySolved.activityId)
             res.status(200)
-            .json(nextActivity(itineraryInCourse, lastActivitySolution, lastActivitySolved.result));
+            .json(nextActivityAdaptativeFactor(itineraryInCourse, student));
         } else {
             res.send(itineraryInCourse.activities[0]);
         }
@@ -27,4 +27,4 @@ const getActivity = (req, res) => {
 
 
 
-module.exports = { getActivity };
+module.exports = { getActivityAdaptativeFactor };
