@@ -24,8 +24,23 @@ The time spent by the student to do the activity.
 4. `http://localhost:3000`
 
 ## Instructions
+### `Get the registered students`
 
-### `GET/ activity/:studentId?itineraryId=1`
+Use the following routes to get the registered students:
+
+To get all the students: 
+http://localhost:3000/student
+
+To get a particular student, for example student 1:
+http://localhost:3000/student?studentId=1
+
+
+### `Get the next activity of some student`
+
+Use the following route to see the next activity of some student:
+http://localhost:3000/activity/:studentId?itineraryId=1
+
+#### Examples:
 
 Student 1: itinerary isn't started
 http://localhost:3000/activity/1?itineraryId=1
@@ -36,3 +51,34 @@ http://localhost:3000/activity/2?itineraryId=1
 Student 3: itinerary is finished
 http://localhost:3000/activity/3?itineraryId=1
 
+### `POST/ sequence/:studentId?itineraryId=1`
+Use the following routes to post a response of some student:
+http://localhost:3000/sequence/studentId?itineraryId=1
+You have to send a object in the body with this information:
+
+{
+    "activityId",
+    "time",
+    "result"
+}
+
+#### Example
+##### Student 1, activity A1
+
+http://localhost:3000/sequence/1?itineraryId=1
+
+{
+    "activityId": "A1",
+    "time": 60,
+    "result": "1_0_2"
+}
+
+##### Student 2, activity A3
+
+http://localhost:3000/sequence/2?itineraryId=1
+
+{
+    "activityId": "A4",
+    "time": 60,
+    "result": "1_0_-5_9"
+}
