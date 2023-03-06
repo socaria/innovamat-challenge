@@ -112,24 +112,26 @@ Download the postman application from https://www.postman.com/downloads/
 Once installed, you will be able to access to "MyWorkSpace" from the following Postman screen:
 
 <p align="center">
-  <img src="./img/postman-main-screen.PNG" alt="Img" />
+![image](https://user-images.githubusercontent.com/103151285/223133354-2958bccd-4cdf-4a83-bcc8-404a1c628450.png)
 </p>
 
 
 . Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
 
 <p align="center">
-  <img src="./img/postman-new-collection.PNG" alt="Img" />
+  ![image](https://user-images.githubusercontent.com/103151285/223133669-e729b1a9-5738-4cd8-969c-5ec964e2fcb6.png)
 </p>
 
 2. Create a new `Request`, give it a name 
 
 <p align="center">
-  <img src="./img/postman-new-request.PNG" alt="Img" />
+  ![image](https://user-images.githubusercontent.com/103151285/223133729-c7b35acf-c017-4374-b639-6674403c74e6.png)
+
 </p>
 
 <p align="center">
-  <img src="./img/postman-new-request-method.PNG" alt="Img" />
+  ![image](https://user-images.githubusercontent.com/103151285/223133815-a2a298d5-2d5d-4666-a656-6b60ef0a6942.png)
+
 </p>
 
 - Indicate type of Request:
