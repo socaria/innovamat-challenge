@@ -112,7 +112,7 @@ Download the postman application from https://www.postman.com/downloads/
 Once installed, you will be able to access to "MyWorkSpace" from the following Postman screen:
 
 <p align="center">
-  <img src="./img/postman-main-screen.png" alt="Img" />
+  <img src="./img/postman-main-screen.PNG" alt="Img" />
 </p>
 
 
