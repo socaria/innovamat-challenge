@@ -119,13 +119,17 @@ Once installed, you will be able to access to "MyWorkSpace" from the following P
 . Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
 
 <p align="center">
-  <img src="./img/postman-new-collection.png" alt="Img" />
+  <img src="./img/postman-new-collection.PNG" alt="Img" />
 </p>
 
 2. Create a new `Request`, give it a name 
 
 <p align="center">
-  <img src="./img/postman-new-request.png" alt="Img" />
+  <img src="./img/postman-new-request.PNG" alt="Img" />
+</p>
+
+<p align="center">
+  <img src="./img/postman-new-request-method.PNG" alt="Img" />
 </p>
 
 - Indicate type of Request:
