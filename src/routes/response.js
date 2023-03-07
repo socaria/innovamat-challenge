@@ -14,11 +14,16 @@ const postResponse = (req, res) => {
         const student = students.find(u => {
             return u.id === parseInt(studentId);
         });
-        let lastResponseId = student.responses[student.responses.length - 1].id;
+
+        let lastResponseId = student.responses[student.responses.length - 1]?.id || 0;
         const itineraryInCourse = itineraries.find(i => i.id === parseInt(itineraryId));
         const currentActivity = itineraryInCourse.activities.find(activity => activity.id === activityId);
         let isSuccess = false;
-        if (score(currentActivity.solution, result) >= 0.75) { isSuccess = true }
+
+        if (score(currentActivity.solution, result) >= 0.75) { 
+            isSuccess = true;
+         }
+
         const response = {
             id: lastResponseId + 1,
             studentId: parseInt(studentId),
@@ -27,7 +32,7 @@ const postResponse = (req, res) => {
             result: result,
             isSuccess: isSuccess
         }
-        lastResponseId++;
+        
         student.responses.push(response);
 
         res.send(response);
