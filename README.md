@@ -18,10 +18,50 @@ The time spent by the student to do the activity.
 
 ## Starting configuration
 
-1. Run `npm install` from "innovamat-challenge" folder to get all the dependencies
-2. Run `npm test` to run the tests
-3. Run `npm run nodemon` to start the server
-4. For GET type requests you can access from the browser with the routes indicates in the instructions. For the oders requests you have to install POSTMAN following the instructions in se POSTMAN section (in the end of this README)
+Make sure you have Node *v12.x* installed:</br>
+</br>
+    bash $ node -v
+</br>
+    v16.15.0
+</br>
+</br>
+It's recommended using [nvm](https://github.com/nvm-sh/nvm) to install it or manage versions.</br>
+</br>
+In case of doesn't have npm you can install via `nvm`</br>
+    bash $ nvm install node v16.15.0 </br>
+
+Make sure you have nodemon globally installed </br>
+</br>
+    bash $ nodemon -v </br>
+    v2.0.9 </br>
+</br>
+In case of doesn't have npm you can install via `npm`</br>
+</br>
+    bash $ npm install -g nodemon</br>
+</br>
+restart the bash console
+</br>
+## Development
+
+### Initial setup
+
+1. Clone the repo.
+
+2. Install dependencies in the root folder:
+
+    $ npm i
+  
+
+4. Start the development server:
+
+    $ npm run nodemon
+
+
+5. For GET type requests you can access from the browser with the routes indicates in the instructions. For the oders requests you have to install POSTMAN following the instructions in se POSTMAN section (in the end of this README)
+
+6. Run the suits test:
+
+    $ npm test
 
 ## Instructions
 ### `Get the registered students`
@@ -64,6 +104,7 @@ http://localhost:3000/activity/3?itineraryId=1
 Use the following routes to post a response of some student:
 http://localhost:3000/response/studentId?itineraryId=1
 You have to send a object in the body with this information:
+
 
 {
     "activityId",
@@ -112,25 +153,25 @@ Download the postman application from https://www.postman.com/downloads/
 Once installed, you will be able to access to "MyWorkSpace" from the following Postman screen:
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/103151285/223133354-2958bccd-4cdf-4a83-bcc8-404a1c628450.png)
+<img src=https://user-images.githubusercontent.com/103151285/223133354-2958bccd-4cdf-4a83-bcc8-404a1c628450.png alt='Img' />
 </p>
 
 
 . Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
 
 <p align="center">
-  ![image](https://user-images.githubusercontent.com/103151285/223133669-e729b1a9-5738-4cd8-969c-5ec964e2fcb6.png)
+  <img src=https://user-images.githubusercontent.com/103151285/223133669-e729b1a9-5738-4cd8-969c-5ec964e2fcb6.png alt='Img' />
 </p>
 
 2. Create a new `Request`, give it a name 
 
 <p align="center">
-  ![image](https://user-images.githubusercontent.com/103151285/223133729-c7b35acf-c017-4374-b639-6674403c74e6.png)
+  <img src=https://user-images.githubusercontent.com/103151285/223133729-c7b35acf-c017-4374-b639-6674403c74e6.png alt='Img' />
 
 </p>
 
 <p align="center">
-  ![image](https://user-images.githubusercontent.com/103151285/223133815-a2a298d5-2d5d-4666-a656-6b60ef0a6942.png)
+  <img src=https://user-images.githubusercontent.com/103151285/223133815-a2a298d5-2d5d-4666-a656-6b60ef0a6942.png alt='Img' />
 
 </p>
 
