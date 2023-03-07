@@ -135,7 +135,7 @@
             {
                 "id": 1,
                 "studentId": 4,
-                "time": 30,
+                "time": 29,
                 "activityId": "A1",
                 "result": "1_0_2",
                 "isSuccess": true
@@ -177,6 +177,28 @@
                 "activityId": "A2",
                 "result": "-2_40_56",
                 "isSuccess": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "student 6",
+        "responses": [
+            {
+                "id": 1,
+                "studentId": 6,
+                "time": 30,
+                "activityId": "A1",
+                "result": "1_0_2",
+                "isSuccess": true
+            },
+            {
+                "id": 2,
+                "studentId": 6,
+                "time": 120,
+                "activityId": "A5",
+                "result": "1_0_4",
+                "isSuccess": false
             }
         ]
     }

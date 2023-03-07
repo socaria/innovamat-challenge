@@ -1,8 +1,7 @@
 const itineraries = require('../../mocks/itineraries.json');
 const students = require('../../mocks/students.json');
-const { nextActivityAdaptativeFactor } = require('../../methods/nextActivityAdaptativeFactor');
+const { nextActivityAdaptativeFactor } = require('../utils/nextActivityAdaptativeFactor');
 
-//Va a determinar la actividad que debe realizar el usuario
 const getActivityAdaptativeFactor = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId } = req.query;
@@ -11,17 +10,18 @@ const getActivityAdaptativeFactor = (req, res) => {
         const student = students.find(u => {
             return u.id === parseInt(studentId);
         });
+
         const itineraryInCourse = itineraries.find(i => i.id === parseInt(itineraryId));
         const lastActivitySolved = student.responses[student.responses.length - 1];
+        
         if (lastActivitySolved) {
-        const lastActivitySolution = itineraryInCourse.activities.find(activity => activity.id === lastActivitySolved.activityId)
             res.status(200)
-            .json(nextActivityAdaptativeFactor(itineraryInCourse, student));
+                .json(nextActivityAdaptativeFactor(itineraryInCourse, student));
         } else {
             res.send(itineraryInCourse.activities[0]);
         }
     } catch (error) {
-        res.status(404).send({error: error.message});
+        res.status(404).send({ error: error.message });
     }
 }
 

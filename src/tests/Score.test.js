@@ -1,7 +1,7 @@
 'use strict'
 const {
   score
-} = require('../methods/score');
+} = require('../utils/score');
 
 describe('score(activity, response)', function () {
   it('It should return 1 if student ', function () {

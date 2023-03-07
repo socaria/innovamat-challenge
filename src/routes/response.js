@@ -1,9 +1,7 @@
 const itineraries = require('../../mocks/itineraries.json');
 const students = require('../../mocks/students.json');
-const { score } = require('../../methods/score');
+const { score } = require('../utils/score');
 
-
-//Va a postear la secuencia que acaba de responder el estudiante
 const postResponse = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId } = req.query;
