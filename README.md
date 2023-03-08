@@ -5,9 +5,9 @@
 ### The application has the following structure: 
 
 * src/app.js: it is the starting point of the application, here we have the server conection.
-* src/server.js: is the server where are the end-points of our API.
+* src/server.js: it is the server where are the end-points of our API.
 * src/routes: there are the routes declarated of each entity.
-* src/utils: there are the methos "score", "nextActivity" and nextActivityAdaptativeFactor".
+* src/utils: there are the methos "score", "nextActivity" and "nextActivityAdaptativeFactor".
 * src/tests: there are the tests for the utils methods.
 * mocks: there are the mocked information about itineraries and students.
 

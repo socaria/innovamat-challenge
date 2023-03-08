@@ -3,6 +3,13 @@ const students = require('../../mocks/students.json');
 const { nextActivity } = require('../utils/nextActivity');
 const { nextActivityAdaptativeFactor } = require('../utils/nextActivityAdaptativeFactor');
 
+/**
+ * It send a response with the next activity of a student.
+ * studentId param and itineraryId query are required to make the request.
+ * adaptativeFactor is optional, if it's "true", the next activity will be with that method.
+ * 
+ */
+
 const getActivity = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId, adaptativeFactor } = req.query;

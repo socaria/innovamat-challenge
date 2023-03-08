@@ -1,5 +1,12 @@
 const students = require('../../mocks/students.json');
 
+
+/**
+ * It send a response with the student specified by params or all the students if
+ * the studentId was not given.
+ * 
+ */
+
 const getStudent = (req, res) => {
     const { studentId } = req.params;
 

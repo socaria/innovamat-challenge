@@ -2,6 +2,12 @@ const itineraries = require('../../mocks/itineraries.json');
 const students = require('../../mocks/students.json');
 const { score } = require('../utils/score');
 
+/**
+ * It post a response of an activity.
+ * studentId param and itineraryId query, are required to make the request.
+ * activityId, time, result are required by body.
+ */
+
 const postResponse = (req, res) => {
     const { studentId } = req.params;
     const { itineraryId } = req.query;
