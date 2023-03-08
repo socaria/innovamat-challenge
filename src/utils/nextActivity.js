@@ -1,5 +1,11 @@
 const { score } = require('./score');
 
+/**
+ * 
+ * @param {*} itinerary 
+ * @param {*} student 
+ * @returns 
+ */
 function nextActivity(itinerary, student) {
     const response = student.responses[student.responses.length - 1];
     const activityId = response.activityId;

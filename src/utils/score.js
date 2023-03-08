@@ -10,11 +10,13 @@ function score(solution, result) {
   else {
     const activitySolution = solution.split("_");
     const responseResult = result.split("_");
+
     let counter = 0;
+    
     for (let i = 0; i < activitySolution.length; i++) {
       if (activitySolution[i] === responseResult[i]) counter++;
     }
-    return counter / activitySolution.length;
+    return (counter / activitySolution.length);
   }
 }
 

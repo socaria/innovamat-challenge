@@ -8,12 +8,12 @@
 * src/server.js: is the server where are the end-points of our API.
 * src/routes: there are the routes declarated of each entity.
 * src/utils: there are the methos "score", "nextActivity" and nextActivityAdaptativeFactor".
-* src/tests: there are the tests for the utils'methods.
-* mocks: there are the mocked informations about itineraries and students.
+* src/tests: there are the tests for the utils methods.
+* mocks: there are the mocked information about itineraries and students.
 
 ## Starting configuration
 
-Make sure you have Node *v12.x* installed:</br>
+Make sure you have Node *v16.x* installed:</br>
 </br>
     bash $ node -v
 </br>
@@ -30,15 +30,14 @@ Make sure you have nodemon globally installed </br>
     bash $ nodemon -v </br>
     v2.0.9 </br>
 </br>
-In case of doesn't have npm you can install via `npm`</br>
+In case of doesn't have nodemon you can install via `npm`</br>
 </br>
     bash $ npm install -g nodemon</br>
 </br>
 restart the bash console
 </br>
-## Development
 
-### Initial setup
+## Initial setup
 
 1. Clone the repo.
 
@@ -47,14 +46,14 @@ restart the bash console
     $ npm i
   
 
-4. Start the development server:
+3. Start the development server:
 
-    $ npm run nodemon
+    $ npm start
 
 
-5. For GET type requests you can access from the browser with the routes indicates in the instructions. For the oders requests you have to install POSTMAN following the instructions in se POSTMAN section (in the end of this README)
+4. For GET requests you can access from the browser with the routes indicates in the instructions section. For the oders requests you have to install POSTMAN following the instructions in the POSTMAN section (at the end of this README)
 
-6. Run the suits test:
+6. Run the tests:
 
     $ npm test
 
@@ -82,45 +81,45 @@ http://localhost:3000/itineraries/1
 ### `Get the next activity of some student`
 
 Use the following route to see the next activity of some student:
-http://localhost:3000/activity/:studentId?itineraryId=1
+http://localhost:3000/activities/:studentId?itineraryId=1
 
 #### Examples:
 
 Student 1: itinerary isn't started
-http://localhost:3000/activity/1?itineraryId=1
+http://localhost:3000/activities/1?itineraryId=1
 
 Student 2: itinerary is in progress
-http://localhost:3000/activity/2?itineraryId=1
+http://localhost:3000/activities/2?itineraryId=1
 
 Student 3: itinerary is finished
-http://localhost:3000/activity/3?itineraryId=1
+http://localhost:3000/activities/3?itineraryId=1
 
 ### `Get the next activity of some student with adaptative factor`
 
 Use the following route to see the next activity of some student:
-http://localhost:3000/activity-adaptative-factor/:studentId?itineraryId=1
+http://localhost:3000/activities-adaptative-factor/:studentId?itineraryId=1
 
 #### Examples:
 
 Student 1: itinerary isn't started
-http://localhost:3000/activity-adaptative-factor/1?itineraryId=1
+http://localhost:3000/activities-adaptative-factor/1?itineraryId=1
 
 Student 2: itinerary is in progress, but the students has to go back to the previous level
-http://localhost:3000/activity-adaptative-factor/4?itineraryId=1
+http://localhost:3000/activities-adaptative-factor/4?itineraryId=1
 
 Student 3: itinerary is finished
-http://localhost:3000/activity/3?itineraryId=1
+http://localhost:3000/activities/3?itineraryId=1
 ### `Post a response of some student`
 Use the following routes to post a response of some student:
-http://localhost:3000/response/studentId?itineraryId=1
+http://localhost:3000/students/:studentId/response?itineraryId=1
 
-You have to choose the "PUT" method and send a object in the body with this information:
+You have to choose the "POST" method and send a object in the body with this information:
 
 
 {
-    "activityId",
-    "time",
-    "result"
+    "activityId": string;
+    "time": number;
+    "result": string;
 }
 
 #### Example
@@ -128,7 +127,7 @@ You have to choose the "PUT" method and send a object in the body with this info
 
 route:
 
-http://localhost:3000/response/1?itineraryId=1
+http://localhost:3000/students/1/response?itineraryId=1
 
 send by body:
 
@@ -142,7 +141,8 @@ send by body:
 
 route:
 
-http://localhost:3000/response/2?itineraryId=1
+http://localhost:3000/students/2/response?itineraryId=1
+
 
 send by body:
 
@@ -168,13 +168,13 @@ Once installed, you will be able to access to "MyWorkSpace" from the following P
 </p>
 
 
-. Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
+1. Create a new `Collection` to group there all the requests that we are going to make for this project. For that click on the `Collections` button, then select `+` and give it a name.
 
 <p align="center">
   <img src=https://user-images.githubusercontent.com/103151285/223133669-e729b1a9-5738-4cd8-969c-5ec964e2fcb6.png alt='Img' />
 </p>
 
-2. Create a new `Request`, give it a name 
+2. Create a new `Request` and give it a name 
 
 <p align="center">
   <img src=https://user-images.githubusercontent.com/103151285/223133729-c7b35acf-c017-4374-b639-6674403c74e6.png alt='Img' />
@@ -191,6 +191,6 @@ Once installed, you will be able to access to "MyWorkSpace" from the following P
     * GET
     * POST
 
-- Indicate the URL http://localhost:3000/
+- Indicate the base URL http://localhost:3000/
 
-- Include the `Params` or the `Body` depending on the type of Request you make
+- Include the `route`, `params` or the `body` depending on the type of request you will perform

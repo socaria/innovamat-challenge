@@ -18,7 +18,7 @@ server.get("/students/:studentId", getStudent);
 
 server.post("/students/:studentId/response", postResponse);
 
-server.get("/activity/:studentId", getActivity);
-server.get("/activity-adaptative-factor/:studentId", getActivityAdaptativeFactor);
+server.get("/activities/:studentId", getActivity);
+server.get("/activities-adaptative-factor/:studentId", getActivityAdaptativeFactor);
 
 module.exports = {server};
