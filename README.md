@@ -83,6 +83,7 @@ http://localhost:3000/itineraries/1
 Use the following route to see the next activity of some student:
 http://localhost:3000/activities/:studentId?itineraryId=1
 
+
 #### Examples:
 
 Student 1: itinerary isn't started
@@ -94,21 +95,8 @@ http://localhost:3000/activities/2?itineraryId=1
 Student 3: itinerary is finished
 http://localhost:3000/activities/3?itineraryId=1
 
-### `Get the next activity of some student with adaptative factor`
-
-Use the following route to see the next activity of some student:
-http://localhost:3000/activities-adaptative-factor/:studentId?itineraryId=1
-
-#### Examples:
-
-Student 1: itinerary isn't started
-http://localhost:3000/activities-adaptative-factor/1?itineraryId=1
-
-Student 2: itinerary is in progress, but the students has to go back to the previous level
-http://localhost:3000/activities-adaptative-factor/4?itineraryId=1
-
-Student 3: itinerary is finished
-http://localhost:3000/activities/3?itineraryId=1
+You can try adding the query "adaptativeFactor=true" to see the response with this method:
+http://localhost:3000/activities/4?itineraryId=1&adaptativeFactor=true
 ### `Post a response of some student`
 Use the following routes to post a response of some student:
 http://localhost:3000/students/:studentId/response?itineraryId=1
