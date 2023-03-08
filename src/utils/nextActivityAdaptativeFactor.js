@@ -1,4 +1,9 @@
 const { score } = require('./score');
+/**
+ *  It returns an object with the next activity that has to be solved by the student considering
+ * an adaptative factor take into account the time spent on the activity and the score.
+ *  Params itinerary and student are objects.
+ */
 
 function nextActivityAdaptativeFactor(itinerary, student) {
     const response = student.responses[student.responses.length - 1];

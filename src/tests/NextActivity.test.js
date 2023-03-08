@@ -3,7 +3,7 @@ const { nextActivity } = require('../utils/nextActivity');
 const itinerary = require('../../mocks/itineraries.json')[0];
 const students = require('../../mocks/students.json');
 
-describe('nextActivity(itenerary, student) should return an object with the next activity that has to be solved by the student.', function () {
+describe('Function nextActivity(itenerary, student) should return an object with the next activity that has to be solved by the student.', function () {
   it('It should return activity 3 if student obtains score > 75% and he is in activity 2', function () {
     expect(nextActivity(itinerary, students[1])).toEqual(itinerary.activities[2])
   });
