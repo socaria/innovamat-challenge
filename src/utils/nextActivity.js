@@ -1,10 +1,8 @@
 const { score } = require('./score');
 
 /**
- * 
- * @param {*} itinerary 
- * @param {*} student 
- * @returns 
+ *  It returns an object with the next activity that has to be solved by the student.
+ *  Params itinerary and student are objects.
  */
 function nextActivity(itinerary, student) {
     const response = student.responses[student.responses.length - 1];

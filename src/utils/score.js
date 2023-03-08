@@ -1,6 +1,7 @@
 /**
  * It returns a number between 0 and 1, which is the score of the student's response
  * comparing it with the activity's solution. 
+ * Params solution and result are strings.
  */
 
 function score(solution, result) {
