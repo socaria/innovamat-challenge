@@ -51,7 +51,7 @@ restart the bash console
     $ npm start
 
 
-4. For GET requests you can access from the browser with the routes indicates in the instructions section. For the oders requests you have to install POSTMAN following the instructions in the POSTMAN section (at the end of this README)
+4. For GET requests you can access from the browser with the routes indicates in the instructions section. For the others requests you must install POSTMAN by following the instructions in the POSTMAN section (at the end of this README).
 
 6. Run the tests:
 
